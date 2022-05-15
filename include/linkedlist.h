@@ -31,9 +31,6 @@ namespace ds_ex
 			bool is_empty() const { return first == 0; }
 			int length() const;
 			bool find(int k, T& x) const;
-			int search(const T& x) const;
-			
-			Chain<T>& delete_element(int k, T& x);
 			Chain<T>& insert_element(int k, const T& x);
 		
 			void output(std::ostream& out) const;
@@ -94,22 +91,6 @@ namespace ds_ex
 		return false;
 	}
 
-	template <class T>
-	int ds_ex::Chain<T>::search(const T& x) const
-	{
-		Node<T> *current = first;
-
-		int index = 1;
-		while (current && current->data != x)
-		{
-			current = current->next;
-			index++;
-		}
-	
-		if (current) return index;
-	
-		return 0;
-	}
 
 	template <class T>
 	void ds_ex::Chain<T>::output(std::ostream& out) const
@@ -131,36 +112,6 @@ namespace ds_ex
 		return out;
 	}
 
-
-	template <class T>
-	ds_ex::Chain<T>& ds_ex::Chain<T>::delete_element(int k, T& x)
-	{
-		if (k < 1 || !first) throw Out_Of_Bounds();
-	
-		Node<T> *p = first;
-	
-		if (k == 1) first = first->next;
-		else
-		{
-			Node<T> *q = first;
-		    	for (int index = 1; index < k - 1 && q; index++)
-			{
-				q = q->next;
-			}
-	
-			if (!q || !q->next)
-				throw Out_Of_Bounds();
-	
-			p = q->next;	
-			q->next = p->next;
-		}	
-
-		x = p->data;
-		delete p;
-
-		return *this;
-
-	}
 
 	template <class T>
 	ds_ex::Chain<T>& ds_ex::Chain<T>::insert_element(int k, const T& x)
