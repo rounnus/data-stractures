@@ -166,12 +166,7 @@ int main(int argc, char *argv[])
 
 	// fill the list_l.
 	fill_random(list_l, number_of_el);
-	number_frequency(list_l, list_h, number_of_el);			
-
-	
-	std::cout << "---------- LIST ELEMENTS -----------" << std::endl << std::endl;
-	std::cout << list_l << std::endl;
-
+	number_frequency(list_l, list_h, number_of_el);	
 
 	return 0;
 }
