@@ -9,7 +9,7 @@ all: ${OBJS}
  
 ./build/linkedlist.o: ./src/linkedlist.cpp
 	mkdir -p ./build/
-	g++ ./src/linkedlist.cpp -c -o ./build/linkedlist.o
+	g++ ./src/linkedlist.cpp ${INCLUDE} -c -o ./build/linkedlist.o
 
 clean:
 	rm -rf ./build/*
