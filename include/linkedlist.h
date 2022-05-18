@@ -1,6 +1,15 @@
 #ifndef DATA_STRACTURES_LINKED_LIST_H
 #define DATA_STRACTURES_LINKED_LIST_H
 
+
+ /**
+	The below classes has been found in the book
+	of data stractures.
+	@book Data stractures, algorithms and applications in c++
+*/
+
+
+
 #include <iostream>
 
 namespace ds_ex
