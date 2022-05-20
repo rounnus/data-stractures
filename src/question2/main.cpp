@@ -29,7 +29,7 @@ static void fill_heaps_with_random(float max[], float min[],
 }
 
 
-static void add_float_using_max(ds_ex::Max_Heap<float>& max_h)
+static inline void add_float_using_max(ds_ex::Max_Heap<float>& max_h)
 {
 
 	float f1;

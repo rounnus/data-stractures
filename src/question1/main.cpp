@@ -77,7 +77,7 @@ static inline bool is_in_records(struct histogram_data *recs, int number,
 	{
 		if (recs[i].number == number) 
 		{
-			// increase the times that number has been apeared.
+			// increase the number of times that number has appeared.
 			recs[i].freq += 1;
 			return true;
 		} 
